@@ -1,0 +1,11 @@
+type Sight = 
+ record {
+   completed: bool;
+   id: nat;
+   name: text;
+ };
+service : {
+  addSight: (text) -> (Sight);
+  getAllSights: () -> (vec Sight) query;
+  toggleSight: (nat) -> (opt Sight);
+}
